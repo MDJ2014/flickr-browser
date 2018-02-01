@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const RandomPic = props =>(
+const Pic = props =>(
 
 
  
@@ -16,4 +16,4 @@ const RandomPic = props =>(
 );
 
 
-export default RandomPic;
+export default Pic;

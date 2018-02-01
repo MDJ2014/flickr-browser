@@ -1,13 +1,17 @@
 import React from 'react';
+import PicList from './PicList'
 
-const Monkeys = () => {
+const Monkeys = (props) => {
 
-  return (
-    <div>
-      <h2>Monkeys</h2>
-      <p><strong>Monkeys are coming</strong>!</p>
-    </div>
-  );
-}
 
+    return (
+      <div>
+        <h2>Monkeys</h2>
+
+        
+        <PicList subject ="monkeys"/>
+          </div>
+     
+    );
+  }
 export default Monkeys;

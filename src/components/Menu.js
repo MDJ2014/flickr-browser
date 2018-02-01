@@ -4,13 +4,14 @@ import { NavLink } from 'react-router-dom';
 
 
 
-const Menu = () =>{
+const Menu = (props) =>{
 
 return(
     <nav className='main-nav'>
 <ul >
 <li>
- <NavLink to="/Cats">Cats</NavLink>
+    {/*props function gets called with cats*/}
+ <NavLink to="/Cats" >Cats</NavLink>
 </li>
 <li>
 <NavLink to="/Dogs">Dogs</NavLink>

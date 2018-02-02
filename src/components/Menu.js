@@ -22,7 +22,9 @@ return(
 <li>
 <NavLink to="/Elephants">Elephants</NavLink>
 </li> 
-
+<li>
+<NavLink to="/Search">Search</NavLink>
+</li> 
 </ul>
 </nav>
 );

@@ -8,6 +8,7 @@ const data = props.data;
 return (
 
 <div className="photo-container">
+<h2>{props.title}</h2>
 <ul>
            {data.length > 0
 						? data.map((image) =>
@@ -18,7 +19,7 @@ return (
 								id={image.id}
 								key={image.id}
 							/>)
-						: <div>Not Found</div>
+						: <div><h2>No Matches Found</h2></div>
 				}
           </ul>
 </div>

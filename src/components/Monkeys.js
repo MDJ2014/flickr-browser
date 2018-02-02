@@ -6,9 +6,7 @@ const Monkeys = (props) => {
 
     return (
       <div>
-        <h2>Monkeys</h2>
-
-        
+             
         <GetImages subject ="monkeys"/>
           </div>
      

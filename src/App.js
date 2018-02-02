@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-
-import {BrowserRouter, Route, Switch, NavLink} from 'react-router-dom';
+import {BrowserRouter, Route, Switch} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 import Home from './components/Home';
@@ -11,32 +11,10 @@ import Cats from './components/Cats';
 import Dogs from './components/Dogs';
 import Monkeys from './components/Monkeys';
 import Elephants from './components/Elephants';
-
+import NotFound from './components/NotFound';
 
 
 class App extends Component {
-
-
-  constructor(){
-    super();
-  
-          this.state={ 
-            searchpics:[],
-            isSearching: false,
-            
-            };
-  }
-
-
-
-
-  componentDidMount(Props){
-    // this.handlePhotos(this.props.subject);
-
-}
-  componentWillReceiveProps(nextProps){
-
-  }
 
 
 
@@ -49,7 +27,7 @@ class App extends Component {
       <div className='App-header'>
           <h1 className='App-title'>Flickr Browser</h1>
       
-      <NavLink to="/Search">Search</NavLink>
+          <NavLink to="/">Home</NavLink>
  </div>
 
 
@@ -63,6 +41,7 @@ class App extends Component {
       <Route  path="/dogs" component = {Dogs}/>
       <Route  path="/monkeys" component = {Monkeys}/>
       <Route  path="/elephants" component = {Elephants}/>
+      <Route  component = {NotFound}/>
 </Switch>
 
 </div>

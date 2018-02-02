@@ -1,7 +1,6 @@
 import React , {Component} from 'react';
-
-
 import GetImages from './GetImages';
+import LoadingIndicator from 'react-loading-indicator';
 
 
 
@@ -12,31 +11,32 @@ class Search extends Component{
     super();
 
     this.state = {
-      searchText: ' '
+      searchText: 'search',
+      isSearching: false
+  
     }
-    
-
+  
 
   }
 
 onSearchChange = e =>{
   this.setState({
-    searchText: e.target.value
+    searchText: e.target.value,
+  isSearching:true
   });
 }
 
 
-
 handleSubmit= e =>{
   e.preventDefault();
-//  let searchResults =()=> <GetImages subject ={this.state.searchText}/>;
-//let path = `/search/${searchValue}`;
-//this.props.history.push(path); 
+  
 this.createSearchResults(this.state.searchText)
+
  e.currentTarget.reset();
 }
 
 createSearchResults(value){
+
     return <GetImages subject={value}/>
 } 
 
@@ -45,10 +45,10 @@ createSearchResults(value){
 render(){
   return(
     <div>
-    <h2>Search</h2>
-<form class="search-form" onSubmit ={this.handleSubmit}>
-        <input type="search" name="search" placeholder="Search" required="" onChange={this.onSearchChange}/>
-        <button type="submit" class="search-button">
+   
+<form className="search-form" onSubmit ={this.handleSubmit}>
+        <input type="search" name="search" placeholder="Search Flickr" required="" onChange={this.onSearchChange}/>
+        <button type="submit" className="search-button">
           <svg fill="#fff" height="24" viewBox="0 0 23 23" width="24" xmlns="http://www.w3.org/2000/svg">
             <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path>
             <path d="M0 0h24v24H0z" fill="none"></path>
@@ -56,8 +56,10 @@ render(){
         </button>
   </form>
 
-  <h1>{this.state.searchText}</h1>
+  {this.state.isSearching ? <LoadingIndicator/>: ""}
+
 {this.createSearchResults(this.state.searchText)}
+  
   </div>
   );
 }

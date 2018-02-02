@@ -8,9 +8,7 @@ const Cats = (props) => {
 
     return (
       <div>
-        <h2>Cats</h2>
-
-        
+              
         <GetImages subject ="cats"/>
           </div>
     

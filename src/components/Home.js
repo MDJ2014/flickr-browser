@@ -18,7 +18,7 @@ import GetImages from './GetImages';
       </div>
 
            
-      <GetImages subject ="trains"/>
+      <GetImages subject ="random photos"/>
           
       </div>
     )

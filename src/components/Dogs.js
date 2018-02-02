@@ -1,7 +1,9 @@
 import React from 'react';
-import PicList from './PicList'
+
+import GetImages from './GetImages';
 
 const Dogs = (props) => {
+
 
 
     return (
@@ -9,9 +11,9 @@ const Dogs = (props) => {
         <h2>Dogs</h2>
 
         
-        <PicList subject ="dogs"/>
+        <GetImages subject ="dogs"/>
           </div>
-     
+    
     );
   }
 export default Dogs;

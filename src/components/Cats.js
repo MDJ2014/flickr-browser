@@ -1,6 +1,6 @@
 import React from 'react';
-import Pic from './Pic';
-import PicList from './PicList'
+
+import GetImages from './GetImages';
 
 const Cats = (props) => {
 
@@ -11,7 +11,7 @@ const Cats = (props) => {
         <h2>Cats</h2>
 
         
-        <PicList subject ="cats"/>
+        <GetImages subject ="cats"/>
           </div>
     
     );

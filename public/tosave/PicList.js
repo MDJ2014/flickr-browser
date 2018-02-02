@@ -22,6 +22,7 @@ componentDidMount(Props){
 }
 
 
+
 fetchImages(term){
     axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=5d81a756961e6961f1881c8cf7fa4c03&tags=${term}&per_page=40&format=json&nojsoncallback=1`)
   
@@ -34,8 +35,6 @@ fetchImages(term){
   console.log("Error loading ", error);
     });
 }
-
-
 
 
     render(){

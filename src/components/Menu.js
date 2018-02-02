@@ -11,9 +11,9 @@ return(
 <ul >
 <li>
     {/*props function gets called with cats*/}
- <NavLink to="/Cats" >Cats</NavLink>
+ <NavLink to="/Cats">Cats</NavLink>
 </li>
-<li>
+ <li>
 <NavLink to="/Dogs">Dogs</NavLink>
 </li>
 <li>
@@ -21,7 +21,7 @@ return(
 </li>
 <li>
 <NavLink to="/Elephants">Elephants</NavLink>
-</li>
+</li> 
 
 </ul>
 </nav>

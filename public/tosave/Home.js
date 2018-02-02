@@ -1,13 +1,10 @@
 import React from 'react';
 
-
-
-import GetImages from './GetImages';
-
+import PicList from './PicList';
  
   const Home = props =>{
 
-
+const data= props.data;
 
 
     return (
@@ -18,7 +15,7 @@ import GetImages from './GetImages';
       </div>
 
            
-      <GetImages subject ="trains"/>
+      <PicList subject ="trains"/>
           
       </div>
     )

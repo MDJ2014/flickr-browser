@@ -1,5 +1,5 @@
 import React from 'react';
-import PicList from './PicList'
+import GetImages from './GetImages';
 
 const Monkeys = (props) => {
 
@@ -9,7 +9,7 @@ const Monkeys = (props) => {
         <h2>Monkeys</h2>
 
         
-        <PicList subject ="monkeys"/>
+        <GetImages subject ="monkeys"/>
           </div>
      
     );

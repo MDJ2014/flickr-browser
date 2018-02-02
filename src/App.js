@@ -3,7 +3,7 @@ import './App.css';
 import {BrowserRouter, Route, Switch} from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 
-
+//imported modules
 import Home from './components/Home';
 import Menu from './components/Menu';
 import Search from './components/Search';
@@ -14,9 +14,9 @@ import Elephants from './components/Elephants';
 import NotFound from './components/NotFound';
 
 
+//App sets up the routes and displays the menu
+
 class App extends Component {
-
-
 
   render() {
     return (

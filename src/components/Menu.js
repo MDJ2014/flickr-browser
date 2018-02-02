@@ -3,7 +3,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 
-
+//the nav links at the top of the page
 const Menu = (props) =>{
 
 return(

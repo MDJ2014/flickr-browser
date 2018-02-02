@@ -1,9 +1,10 @@
 import React , {Component} from 'react';
 import GetImages from './GetImages';
-import LoadingIndicator from 'react-loading-indicator';
+// import LoadingIndicator from 'react-loading-indicator';
 
 
 
+//searces for flickr images
 
 class Search extends Component{
 
@@ -12,12 +13,14 @@ class Search extends Component{
 
     this.state = {
       searchText: 'search',
-      isSearching: false
-  
+      isSearching: false,
+ 
     }
   
 
   }
+
+  //set the state of the term to be searched for 
 
 onSearchChange = e =>{
   this.setState({
@@ -26,22 +29,22 @@ onSearchChange = e =>{
   });
 }
 
-
+//begin the search when the submit button is clicked using the search term stored in state
 handleSubmit= e =>{
   e.preventDefault();
-  
+//call this function to start the search
 this.createSearchResults(this.state.searchText)
 
  e.currentTarget.reset();
 }
 
 createSearchResults(value){
-
+//returns the GetImages module with the value of the search
     return <GetImages subject={value}/>
 } 
 
 
-
+//renders the search form
 render(){
   return(
     <div>
@@ -56,8 +59,8 @@ render(){
         </button>
   </form>
 
-  {this.state.isSearching ? <LoadingIndicator/>: ""}
-
+  {/* {this.state.isSearching ? <LoadingIndicator/>: ""} */}
+{/*calls the function to create the module that will fetch the data*/}
 {this.createSearchResults(this.state.searchText)}
   
   </div>

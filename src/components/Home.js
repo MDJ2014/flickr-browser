@@ -4,11 +4,9 @@ import React from 'react';
 
 import GetImages from './GetImages';
 
+ //a welcome page to begin with. Shows random pictures and gives some friendly instructions.
  
   const Home = props =>{
-
-
-
 
     return (
       <div>

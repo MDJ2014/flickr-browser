@@ -1,6 +1,10 @@
 import React from 'react';
 import Pic from './Pic';
 
+
+
+//container for displaying the li of each image using the Pic module.  
+
 const Container =(props)=>{
 
 const data = props.data;

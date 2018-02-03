@@ -42,7 +42,7 @@ componentWillReceiveProps(nextProps){
 //fetch the data
 fetchImages(term){
   
-    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${term}&per_page=40&format=json&nojsoncallback=1`)
+    axios.get(`https://api.flickr.com/services/rest/?method=flickr.photos.search&api_key=${apiKey}&tags=${term}&per_page=24&format=json&nojsoncallback=1`)
   
     .then(response =>{
       this.setState({

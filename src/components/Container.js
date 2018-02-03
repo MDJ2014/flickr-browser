@@ -1,6 +1,6 @@
 import React from 'react';
 import Pic from './Pic';
-
+import NoMatchesFound from './NoMatchesFound';
 
 
 //container for displaying the li of each image using the Pic module.  
@@ -23,7 +23,7 @@ return (
 								id={image.id}
 								key={image.id}
 							/>)
-						: <div><h2>No Matches Found</h2></div>
+						: <div><NoMatchesFound/></div>
 				}
           </ul>
 </div>

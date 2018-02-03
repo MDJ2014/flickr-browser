@@ -2,7 +2,7 @@ import React , {Component} from 'react';
 import GetImages from './GetImages';
 import debounce from 'throttle-debounce';
 
-// import LoadingIndicator from 'react-loading-indicator';
+
 
 
 
@@ -14,8 +14,8 @@ class Search extends Component{
     super();
     
     this.state = {
-      searchText: 'search',
-      isSearching: false
+      searchText: 'search'
+  
      }
    }
 
@@ -23,7 +23,7 @@ class Search extends Component{
 onSearchChange = e =>{
   var value=e.target.value;
   setTimeout(function() { this.setState({searchText: value,
-    isSearching:true}); }.bind(this), 3000);
+    }); }.bind(this), 3500);
 }
 
 
@@ -58,7 +58,7 @@ render(){
         </button>
   </form>
 
-  {/* {this.state.isSearching ? <LoadingIndicator/>: ""} */}
+  
 {/*calls the function to create the module that will fetch the data*/}
 {this.createSearchResults(this.state.searchText)}
   

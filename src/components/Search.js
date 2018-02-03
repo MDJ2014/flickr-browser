@@ -1,5 +1,7 @@
 import React , {Component} from 'react';
 import GetImages from './GetImages';
+import debounce from 'throttle-debounce';
+
 // import LoadingIndicator from 'react-loading-indicator';
 
 
@@ -10,24 +12,20 @@ class Search extends Component{
 
   constructor(){
     super();
-
+    
     this.state = {
       searchText: 'search',
-      isSearching: false,
- 
-    }
-  
-
-  }
+      isSearching: false
+     }
+   }
 
   //set the state of the term to be searched for 
-
 onSearchChange = e =>{
-  this.setState({
-    searchText: e.target.value,
-  isSearching:true
-  });
+  var value=e.target.value;
+  setTimeout(function() { this.setState({searchText: value,
+    isSearching:true}); }.bind(this), 3000);
 }
+
 
 //begin the search when the submit button is clicked using the search term stored in state
 handleSubmit= e =>{
@@ -46,6 +44,7 @@ createSearchResults(value){
 
 //renders the search form
 render(){
+
   return(
     <div>
    
